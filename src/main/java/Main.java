@@ -45,7 +45,7 @@ public class Main {
 
             return new ModelAndView(attributes, "showindex.ftl");
         }, new FreeMarkerEngine());
-        
+
     get("/detail", (req, res) -> {
 
               Connection connection = null;
@@ -62,8 +62,8 @@ public class Main {
                       xml += "<Information>Diamond beautiful ring </Information>";
                       xml += "<Discount>-25%</Discount>";
                       xml += "<Since>03/2016</Since>";
-                      xml += "<Original price>$1,725.00</Original price>";
-                      xml += "<Sale price>$1,550.00</Sale price>";
+                      xml += "<Original_price>$1,725.00</Original_price>";
+                      xml += "<Sale_price>$1,550.00</Sale_price>";
                       xml += "<Availability>Yes</Availability>";
                       xml += "<SKU>Candles OV</SKU>";
                       xml += "<Size>6</Size>";
