@@ -45,6 +45,7 @@ public class Main {
 
             return new ModelAndView(attributes, "showindex.ftl");
         }, new FreeMarkerEngine());
+        
     get("/detail", (req, res) -> {
 
               Connection connection = null;
@@ -55,9 +56,9 @@ public class Main {
 
 
                   String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
-                  xml += "<detail>";
+                  xml += "<About>";
 
-                      xml += "<detail>";
+                      xml += "<Detail>";
                       xml += "<Information>Diamond beautiful ring </Information>";
                       xml += "<Discount>-25%</Discount>";
                       xml += "<Since>03/2016</Since>";
@@ -68,9 +69,9 @@ public class Main {
                       xml += "<Size>6</Size>";
                       xml += "<Color>Silver</Color>";
                       xml += "<Material>Diamond</Material>";
-                      xml += "</detail>";
+                      xml += "</Detail>";
 
-                  xml += "</detail>";
+                  xml += "</About>";
                   res.type("text/xml");
                   return xml;
 

@@ -3,7 +3,7 @@ $(function() {
          url : "/detail",
          type : "get",
          success : function(result) {
-           detail = result.getElementsByTagName("detail");
+           detail = result.getElementsByTagName("Detail");
            $("div.product_detail").append(
                '<p>Information:'+detail[0].childNodes[0].firstChild.nodeValue+'</p>'+
                '<p>Discount:'+detail[0].childNodes[1].firstChild.nodeValue+'</p>'+
@@ -18,4 +18,4 @@ $(function() {
              );
            }
          });
-       })
+       });
