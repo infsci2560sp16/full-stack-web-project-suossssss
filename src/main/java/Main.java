@@ -45,6 +45,42 @@ public class Main {
 
             return new ModelAndView(attributes, "showindex.ftl");
         }, new FreeMarkerEngine());
+    get("/detail", (req, res) -> {
+
+              Connection connection = null;
+              // res.type("application/xml"); //Return as XML
+
+              Map<String, Object> attributes = new HashMap<>();
+              try {
+
+
+                  String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+                  xml += "<detail>";
+
+                      xml += "<detail>";
+                      xml += "<Information>Diamond beautiful ring </Information>";
+                      xml += "<Discount>-25%</Discount>";
+                      xml += "<Since>03/2016</Since>";
+                      xml += "<Original price>$1,725.00</Original price>";
+                      xml += "<Sale price>$1,550.00</Sale price>";
+                      xml += "<Availability>Yes</Availability>";
+                      xml += "<SKU>Candles OV</SKU>";
+                      xml += "<Size>6</Size>";
+                      xml += "<Color>Silver</Color>";
+                      xml += "<Material>Diamond</Material>";
+                      xml += "</detail>";
+
+                  xml += "</detail>";
+                  res.type("text/xml");
+                  return xml;
+
+              } catch (Exception e) {
+                  attributes.put("message", "There was an error: " + e);
+                  return attributes;
+              } finally {
+                  if (connection != null) try{connection.close();} catch(SQLException e){}
+              }
+          });
 
 
     /*get("/", (request, response) -> {
