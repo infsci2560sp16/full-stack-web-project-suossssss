@@ -36,6 +36,8 @@ public class Main {
 
     new ProductController (new ProductService());
 
+    Gson gson=new Gson();
+
     get("/showindex", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             SimpleDateFormat formatter = new SimpleDateFormat("EEEE");
@@ -83,7 +85,36 @@ public class Main {
               }
           });
 
+          post("/login", (req, res) -> {
+                    Map<String, Object> data = new HashMap<>();
+                    data.put("username", "suo");
+                    data.put("password","123456");
+                    return data;
+                }, gson::toJson);
 
+                post("/register", (req, res) -> {
+                       Connection connection = null;
+                          try {
+                              connection = DatabaseUrl.extract().getConnection();
+                              JSONObject obj = new JSONObject(req.body());
+                              String username = obj.getString("email");
+                              String password = obj.getString("password");
+
+                              String sql = "INSERT INTO User(username, email, password) VALUES ('"
+                                            + username + "','" + password + "')";
+
+                              connection = DatabaseUrl.extract().getConnection();
+                              Statement stmt = connection.createStatement();
+                              stmt.executeUpdate("CREATE TABLE IF NOT EXISTS User");
+                              stmt.executeUpdate(sql);
+
+                             return req.body();
+                            } catch (Exception e) {
+                              return e.getMessage();
+                            } finally {
+
+                            }
+                          });
     /*get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");

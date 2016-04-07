@@ -154,6 +154,25 @@
 				<strong>Password:</strong><sup>*</sup><br>
 				<input type="text" name="password" class="ind_cont_input ind_cont_inputioce1" onfocus="if (value =='This field cannot be empty.'){value =''}" onblur="if (value ==''){value='This field cannot be empty.'}" value="This field cannot be empty." >
 			    </div><!-- .password -->
+          <script>
+          function login(){
+            var email = $("#email").val();
+            var password = $("#password").val();
+            var info = JSON.stringify({"email":email,"password":password});
+            alert(info);
+            $.ajax({
+              contentType:'application/json',
+              url : "/login",
+              type : "post",
+              dataType: "json",
+              data:info,
+              success : function() {
+                alert("welcome!");
+                window.location.href='/index.html';
+              }
+            });
+          }
+          </script>
 			   <script type="text/javascript">
 function disp_alert()
 {
@@ -161,7 +180,7 @@ alert("Please enter your Email and Password!")
 }
 </script>
 			    <div class="submit">
-				<input type="submit" onclick="disp_alert()" value="Login" />
+				<input type="submit" onclick="login()" value="Login" />
 
 				<sup>*</sup><span>Required Field</span>
 			    </div><!-- .submit -->
