@@ -44,15 +44,7 @@ public class Main {
             return new ModelAndView(attributes, "showindex.ftl");
         }, new FreeMarkerEngine());
 
-    get("/hello", (req, res) -> {
-          RelativisticModel.select();
-
-          String energy = System.getenv().get("ENERGY");
-
-          Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
-          return "E=mc^2: " + energy + " = " + m.toString();
-        });
-
+  
     /*get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
