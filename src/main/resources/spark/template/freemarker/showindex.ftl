@@ -49,8 +49,8 @@
                         <h6>Happy weekend!</h6>
                         <#else> <h6>:)</h6>
                         </#if>
-                        
-                        You can <a href="login.html">login</a> or <a href="login.html">create an account</a>.
+
+                        You can <a href="login.html">login</a> or <a href="register.html">create an account</a>.
                     </div><!-- .welcome -->
 
                     <ul id="cart_nav">

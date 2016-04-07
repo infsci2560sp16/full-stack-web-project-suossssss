@@ -70,7 +70,7 @@
             <div class="grid_9">
                 <div class="top_header">
                     <div class="welcome">
-                        Welcome visitor you can <a href="login.html">login</a> or <a href="login.html">create an account</a>.
+                        Welcome visitor you can <a href="login.html">login</a> or <a href="register.html">create an account</a>.
                     </div><!-- .welcome -->
 
                     <ul id="cart_nav">
@@ -80,9 +80,9 @@
 
                                 <div class="cart_ico"></div>
                                 Cart
-                               
+
                             </a>
-                         
+
                         </li>
                     </ul><!-- .cart_nav -->
 
@@ -111,13 +111,13 @@
                             <ul class="sub">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="login.html">Login</a></li>
-                                <li><a href="shopping_cart.html">Shoping cart</a></li> 
+                                <li><a href="shopping_cart.html">Shoping cart</a></li>
                                 <li><a href="product_page.html">Product view</a></li>
                                 <li><a href="catalog_grid.html">Events</a></li>
                                  <li><a href="blog_post.html">Blog</a></li>
                                 <li><a href="contact_us.html">Contact us</a></li>
-                              
-                               
+
+
                             </ul>
                         </li>
                     </ul>
@@ -125,22 +125,23 @@
             </div><!-- .grid_9 -->
         </div>
     </header>
-    
+
     <section id="main" class="page-login">
         <div class="container_12">
             <div id="content" class="grid_12">
                 <header>
                     <h2 class="page_title">Login or Create an Account</h2>
                 </header>
-                    
+
                 <article>
                     <div class="grid_6 new_customers">
 			<h2>New Customers</h2>
 			<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
 			<div class="clear"></div>
-			<button class="account">Create An Account</button>
+			<button class="account" onclick="window.location.href='register.html'">Create An Account</button>
+
                     </div><!-- .grid_6 -->
-		
+
                     <div class="grid_6 registed_form">
 			<form class="registed">
 			    <h2>Registed Customers</h2>
@@ -159,15 +160,15 @@ function disp_alert()
 alert("Please enter your Email and Password!")
 }
 </script>
-			    <div class="submit">										
+			    <div class="submit">
 				<input type="submit" onclick="disp_alert()" value="Login" />
-                              
+
 				<sup>*</sup><span>Required Field</span>
 			    </div><!-- .submit -->
 			</form><!-- .registed -->
                     </div><!-- .grid_6 -->
 		</article>
-                    
+
                 <div class="clear"></div>
             </div><!-- #content -->
 
@@ -175,7 +176,7 @@ alert("Please enter your Email and Password!")
         </div><!-- .container_12 -->
     </section><!-- #main -->
     <div class="clear"></div>
-        
+
 
 </body>
 
