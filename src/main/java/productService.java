@@ -1,21 +1,21 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class productService {
-	private List<product> products = new ArrayList<product>();
-	productService(){
-		products.add(new product("Ring","handmade Cut Emerald Ring"));
+public class ProductService {
+	private List<Product> products = new ArrayList<Product>();
+	ProductService(){
+		products.add(new Product("Ring","handmade Cut Emerald Ring"));
 
 	}
 
 
 
-	  public List<product> getAllProducts() {
+	  public List<Product> getAllProducts() {
 		  return products;
 	  }
 
 
-	  public product getProduct(String name) {
+	  public Product getProduct(String name) {
 		  for(int i = 0; i<products.size();i++){
 			  if(products.get(i).getName()==name){
 				  return products.get(i);
@@ -25,14 +25,14 @@ public class productService {
 	  }
 
 
-	  public product createProduct(String name, String description) {
-		return new product (name,description);
+	  public Product createProduct(String name, String description) {
+		return new Product (name,description);
 
 	  }
 
 
-	  public product  updateProduct (String name, String description) {
-		  product f = null;
+	  public Product  updateProduct (String name, String description) {
+		  Product f = null;
 		  for(int i = 0; i<products.size();i++){
 			  if(products.get(i).getName()==name){
 				  products.get(i).setName(name);

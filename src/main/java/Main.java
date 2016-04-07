@@ -34,7 +34,7 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    new productController(new productService());
+    new ProductController (new ProductService());
 
     get("/showindex", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();

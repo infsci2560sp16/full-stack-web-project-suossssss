@@ -2,9 +2,9 @@ import static spark.Spark.*;
 import spark.*;
 import com.google.gson.Gson;
 
-public class productController {
+public class ProductController {
 
-  public productController(final productService productService) {
+  public ProductController(final ProductService productService) {
 
     get("/product", new Route() {
       @Override
