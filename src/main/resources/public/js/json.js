@@ -1,6 +1,6 @@
 $(function (){
   $.ajax({
-    url : "/products",
+    url : "/product",
     success : function(result) {
       var products = JSON.parse(result);
       if(products.length>0){
