@@ -27,6 +27,9 @@ public class Main {
 
     get("/showindex", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
+            SimpleDateFormat formatter = new SimpleDateFormat("EEEE");
+            String date = formatter.format(new Date());
+            attributes.put("date",date);
             attributes.put("message", "Hello World!");
 
             return new ModelAndView(attributes, "showindex.ftl");

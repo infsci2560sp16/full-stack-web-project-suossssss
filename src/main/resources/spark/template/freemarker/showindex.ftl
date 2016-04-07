@@ -44,7 +44,13 @@
             <div class="grid_9">
                 <div class="top_header">
                     <div class="welcome">
-                        Welcome visitor you can <a href="login.html">login</a> or <a href="login.html">create an account</a>.
+                        Welcome visitor! Today is ${date}.
+                        <#if date=="Sunday"||date=="Saturday">
+                        <h6>Happy weekend!</h6>
+                        <#else> <h6>:)</h6>
+                        </#if>
+                        
+                        You can <a href="login.html">login</a> or <a href="login.html">create an account</a>.
                     </div><!-- .welcome -->
 
                     <ul id="cart_nav">
