@@ -1,4 +1,4 @@
-$(function (){
+$(function(){
   $.ajax({
     url : "/product",
     success : function(result) {
