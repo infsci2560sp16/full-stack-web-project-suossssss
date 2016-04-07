@@ -148,11 +148,11 @@
 			    <p>If you have an account with us, please log in.</p>
 			    <div class="email">
 				<strong>Email Adress:</strong><sup>*</sup><br>
-				<input type="email" name="email" class="ind_cont_input ind_cont_inputioce1" onfocus="if (value =='This field cannot be empty.'){value =''}" onblur="if (value ==''){value='This field cannot be empty.'}" value="This field cannot be empty."  >
+				<input type="email" id ="email" name="email" class="ind_cont_input ind_cont_inputioce1" onfocus="if (value =='This field cannot be empty.'){value =''}" onblur="if (value ==''){value='This field cannot be empty.'}" value="This field cannot be empty."  >
 			    </div><!-- .email -->
 			    <div class="password">
 				<strong>Password:</strong><sup>*</sup><br>
-				<input type="text" name="password" class="ind_cont_input ind_cont_inputioce1" onfocus="if (value =='This field cannot be empty.'){value =''}" onblur="if (value ==''){value='This field cannot be empty.'}" value="This field cannot be empty." >
+				<input type="text" id="password" name="password" class="ind_cont_input ind_cont_inputioce1" onfocus="if (value =='This field cannot be empty.'){value =''}" onblur="if (value ==''){value='This field cannot be empty.'}" value="This field cannot be empty." >
 			    </div><!-- .password -->
           <script>
           function login(){
@@ -173,14 +173,9 @@
             });
           }
           </script>
-			   <script type="text/javascript">
-function disp_alert()
-{
-alert("Please enter your Email and Password!")
-}
-</script>
+
 			    <div class="submit">
-				<input type="submit" onclick="login()" value="Login" />
+				<input type="submit" onclick="login()"  value="Login" />
 
 				<sup>*</sup><span>Required Field</span>
 			    </div><!-- .submit -->
