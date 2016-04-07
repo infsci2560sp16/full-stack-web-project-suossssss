@@ -28,6 +28,25 @@
     <script src="js/jquery.easing.1.2.js"></script>
     <script src="js/jquery.anythingslider.js"></script>
     <script src="js/jquery.anythingslider.fx.js"></script>
+    <!-- <script>
+    function login(){
+      var email = $("#email").val();
+      var password = $("#password").val();
+      var info = JSON.stringify({"email":email,"password":password});
+      alert(info);
+      $.ajax({
+        contentType:'application/json',
+        url : "/login",
+        type : "post",
+        dataType: "json",
+        data:info,
+        success : function() {
+          alert("welcome!");
+          window.location.href='/index.html';
+        }
+      });
+    }
+    </script> -->
 </head>
 
 <body>
@@ -154,28 +173,10 @@
 				<strong>Password:</strong><sup>*</sup><br>
 				<input type="text" id="password" name="password" class="ind_cont_input ind_cont_inputioce1" onfocus="if (value =='This field cannot be empty.'){value =''}" onblur="if (value ==''){value='This field cannot be empty.'}" value="This field cannot be empty." >
 			    </div><!-- .password -->
-          <script>
-          function login(){
-            var email = $("#email").val();
-            var password = $("#password").val();
-            var info = JSON.stringify({"email":email,"password":password});
-            alert(info);
-            $.ajax({
-              contentType:'application/json',
-              url : "/login",
-              type : "post",
-              dataType: "json",
-              data:info,
-              success : function() {
-                alert("welcome!");
-                window.location.href='/index.html';
-              }
-            });
-          }
-          </script>
+
 
 			    <div class="submit">
-				<input type="submit" onclick="login()"  value="Login" />
+				<input type="submit" onclick="post_login()"  value="Login" />
 
 				<sup>*</sup><span>Required Field</span>
 			    </div><!-- .submit -->

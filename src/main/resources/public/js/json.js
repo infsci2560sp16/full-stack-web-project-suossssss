@@ -14,3 +14,21 @@ $(function(){
     }
   });
 });
+
+function post_login(){
+  var email = $("#email").val();
+  var password = $("#password").val();
+  var info = JSON.stringify({"email":email,"password":password});
+  alert(info);
+  $.ajax({
+    contentType:'application/json',
+    url : "/login",
+    type : "post",
+    dataType: "json",
+    data:info,
+    success : function() {
+      alert("welcome!");
+      window.location.href='/index.html';
+    }
+  });
+}
