@@ -1,5 +1,26 @@
-<title>Getting Started</title>
-<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta charset="utf-8">
+
+<title>Home</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="css/grid.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/normalize.css">
+
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+<script src="js/html5.js"></script>
+<script src="js/main.js"></script>
+<script src="js/radio.js"></script>
+<script src="js/checkbox.js"></script>
+<script src="js/selectBox.js"></script>
+<script src="js/jquery.carouFredSel-5.2.2-packed.js"></script>
+<script src="js/jquery.jqzoom-core.js"></script>
+<script src="js/jquery.transit.js"></script>
+<script src="js/jquery.easing.1.2.js"></script>
+<script src="js/jquery.anythingslider.js"></script>
+<script src="js/jquery.anythingslider.fx.js"></script>

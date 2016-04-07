@@ -25,6 +25,13 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
+    get("/showindex", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("message", "Hello World!");
+
+            return new ModelAndView(attributes, "showindex.ftl");
+        }, new FreeMarkerEngine());
+
     get("/hello", (req, res) -> {
           RelativisticModel.select();
 
