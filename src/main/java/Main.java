@@ -34,6 +34,8 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
+    new productController(new productService());
+
     get("/showindex", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             SimpleDateFormat formatter = new SimpleDateFormat("EEEE");
@@ -44,7 +46,7 @@ public class Main {
             return new ModelAndView(attributes, "showindex.ftl");
         }, new FreeMarkerEngine());
 
-  
+
     /*get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
